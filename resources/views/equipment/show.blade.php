@@ -6,7 +6,11 @@
         <a href="{{ route('equipment.index') }}" class="hover:underline">Alat Berat</a> / {{ $equipment->name }}
     </nav>
 
-    <img src="{{ $equipment->image_url }}" alt="{{ $equipment->name }}" class="w-full h-72 object-cover rounded-xl mb-6">
+    <x-photo-slider
+        :photos="$equipment->photos"
+        :fallback-url="$equipment->image_url"
+        :alt="$equipment->name"
+    />
 
     <p class="text-xs uppercase tracking-wide text-gray-500 mb-1">{{ $equipment->category }}</p>
     <h1 class="text-3xl font-bold mb-4">{{ $equipment->name }}</h1>

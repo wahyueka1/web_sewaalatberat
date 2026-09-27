@@ -2,8 +2,13 @@
 @section('title', 'Portofolio')
 
 @section('content')
-<div class="flex justify-end mb-4">
-    <a href="{{ route('admin.portofolio.create') }}" class="bg-gray-900 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-gray-800">
+<div class="flex flex-col sm:flex-row justify-between gap-3 mb-4">
+    <form action="{{ route('admin.portofolio.index') }}" method="GET" class="flex gap-2">
+        <input type="text" name="q" value="{{ request('q') }}" placeholder="Cari judul/klien/lokasi..."
+               class="border border-gray-300 rounded-lg px-3 py-2 text-sm w-64">
+        <button class="bg-gray-200 hover:bg-gray-300 text-sm font-medium px-4 py-2 rounded-lg">Cari</button>
+    </form>
+    <a href="{{ route('admin.portofolio.create') }}" class="bg-gray-900 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-gray-800 text-center">
         + Tambah Portofolio
     </a>
 </div>
