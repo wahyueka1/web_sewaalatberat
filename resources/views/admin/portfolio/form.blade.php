@@ -33,5 +33,5 @@
 <div>
     <label class="block text-sm font-medium mb-1">Tambah Foto Baru</label>
     <input type="file" name="photos[]" accept="image/*" multiple class="text-sm">
-    <p class="text-xs text-gray-500 mt-1">Bisa pilih beberapa foto sekaligus (total maksimal 5 foto per proyek).</p>
+    <p class="text-xs text-gray-500 mt-1">Bisa pilih beberapa foto sekaligus (maks. 5 foto per proyek).</p>
 </div>
