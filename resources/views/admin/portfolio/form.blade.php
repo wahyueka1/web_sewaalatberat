@@ -31,9 +31,7 @@
 </div>
 
 <div>
-    <label class="block text-sm font-medium mb-1">Foto Proyek</label>
-    <input type="file" name="image" accept="image/*" class="text-sm">
-    @if(($portfolio->image ?? null))
-        <img src="{{ $portfolio->image_url }}" class="w-32 h-20 object-cover rounded-lg mt-2">
-    @endif
+    <label class="block text-sm font-medium mb-1">Tambah Foto Baru</label>
+    <input type="file" name="photos[]" accept="image/*" multiple class="text-sm">
+    <p class="text-xs text-gray-500 mt-1">Bisa pilih beberapa foto sekaligus (maks. 5 foto per proyek).</p>
 </div>

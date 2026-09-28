@@ -16,6 +16,7 @@
             <a href="{{ route('admin.alat.index') }}" class="block px-3 py-2 rounded-lg hover:bg-gray-800 {{ request()->routeIs('admin.alat.*') ? 'bg-gray-800' : '' }}">Alat Berat</a>
             <a href="{{ route('admin.portofolio.index') }}" class="block px-3 py-2 rounded-lg hover:bg-gray-800 {{ request()->routeIs('admin.portofolio.*') ? 'bg-gray-800' : '' }}">Portofolio</a>
             <a href="{{ route('admin.company-profile.edit') }}" class="block px-3 py-2 rounded-lg hover:bg-gray-800 {{ request()->routeIs('admin.company-profile.*') ? 'bg-gray-800' : '' }}">Profil Usaha</a>
+            <a href="{{ route('admin.settings.edit') }}" class="block px-3 py-2 rounded-lg hover:bg-gray-800 {{ request()->routeIs('admin.settings.*') ? 'bg-gray-800' : '' }}">Pengaturan Admin</a>
         </nav>
         <form method="POST" action="{{ route('admin.logout') }}" class="p-3 border-t border-gray-800">
             @csrf

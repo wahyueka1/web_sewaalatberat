@@ -2,9 +2,20 @@
 @section('title', 'Profil Usaha')
 
 @section('content')
-<form action="{{ route('admin.company-profile.update') }}" method="POST" class="bg-white rounded-xl border border-gray-200 p-6 space-y-4 max-w-2xl">
+<form action="{{ route('admin.company-profile.update') }}" method="POST" enctype="multipart/form-data" class="bg-white rounded-xl border border-gray-200 p-6 space-y-4 max-w-2xl">
     @csrf
     @method('PUT')
+
+    <div>
+        <label class="block text-sm font-medium mb-1">Logo Usaha</label>
+        <div class="flex items-center gap-4">
+            @if($company->logo_url)
+                <img src="{{ $company->logo_url }}" class="w-16 h-16 object-contain rounded-lg border border-gray-200 bg-white p-1">
+            @endif
+            <input type="file" name="logo" accept="image/*" class="text-sm">
+        </div>
+        <p class="text-xs text-gray-500 mt-1">Logo akan tampil di samping nama usaha pada bagian atas halaman publik.</p>
+    </div>
 
     <div>
         <label class="block text-sm font-medium mb-1">Nama Usaha</label>
@@ -36,7 +47,7 @@
                    class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm">
         </div>
         <div>
-            <label class="block text-sm font-medium mb-1">Nomor WhatsApp</label>
+            <label class="block text-sm font-medium mb-1">WhatsApp</label>
             <input type="text" name="whatsapp_number" value="{{ old('whatsapp_number', $company->whatsapp_number) }}"
                    placeholder="628xxxxxxxxxx (format internasional, tanpa +)"
                    class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm">

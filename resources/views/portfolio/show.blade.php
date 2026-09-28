@@ -6,7 +6,11 @@
         <a href="{{ route('portfolio.index') }}" class="hover:underline">Portofolio</a> / {{ $portfolio->title }}
     </nav>
 
-    <img src="{{ $portfolio->image_url }}" alt="{{ $portfolio->title }}" class="w-full h-72 object-cover rounded-xl mb-6">
+    <x-photo-slider
+        :photos="$portfolio->photos"
+        :fallback-url="$portfolio->image_url"
+        :alt="$portfolio->title"
+    />
 
     <h1 class="text-3xl font-bold mb-2">{{ $portfolio->title }}</h1>
     <p class="text-gray-500 mb-6">
