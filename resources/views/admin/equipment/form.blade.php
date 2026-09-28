@@ -24,11 +24,9 @@
 </div>
 
 <div>
-    <label class="block text-sm font-medium mb-1">Foto Alat</label>
-    <input type="file" name="image" accept="image/*" class="text-sm">
-    @if(($equipment->image ?? null))
-        <img src="{{ $equipment->image_url }}" class="w-32 h-20 object-cover rounded-lg mt-2">
-    @endif
+    <label class="block text-sm font-medium mb-1">Tambah Foto Baru</label>
+    <input type="file" name="photos[]" accept="image/*" multiple class="text-sm">
+    <p class="text-xs text-gray-500 mt-1">Bisa pilih beberapa foto sekaligus (total maksimal 5 foto per alat).</p>
 </div>
 
 <label class="flex items-center gap-2 text-sm">

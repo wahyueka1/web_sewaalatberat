@@ -10,6 +10,9 @@ class Portfolio extends Model
 {
     use HasFactory;
 
+    // Batas maksimal jumlah foto per proyek (dipakai saat validasi upload di admin)
+    public const MAX_PHOTOS = 5;
+
     protected $fillable = [
         'title',
         'slug',
@@ -33,8 +36,17 @@ class Portfolio extends Model
         });
     }
 
+    public function photos()
+    {
+        return $this->hasMany(PortfolioPhoto::class)->orderBy('sort_order');
+    }
+
     public function getImageUrlAttribute(): string
     {
+        if ($cover = $this->photos->first()) {
+            return $cover->url;
+        }
+
         return $this->image
             ? asset('storage/' . $this->image)
             : asset('images/placeholder-portfolio.jpg');

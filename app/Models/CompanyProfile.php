@@ -8,6 +8,7 @@ class CompanyProfile extends Model
 {
     protected $fillable = [
         'company_name',
+        'logo',
         'tagline',
         'description',
         'address',
@@ -38,5 +39,10 @@ class CompanyProfile extends Model
     {
         $number = preg_replace('/\D/', '', $this->whatsapp_number);
         return "https://wa.me/{$number}";
+    }
+
+    public function getLogoUrlAttribute(): ?string
+    {
+        return $this->logo ? asset('storage/' . $this->logo) : null;
     }
 }
