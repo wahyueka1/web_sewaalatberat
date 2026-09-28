@@ -12,7 +12,7 @@
             </a>
             <a href="{{ $company->whatsapp_link }}" target="_blank" rel="noopener"
                class="bg-green-500 hover:bg-green-600 font-medium px-6 py-3 rounded-lg">
-                Chat WhatsApp
+                Hubungi WhatsApp
             </a>
         </div>
     </div>
