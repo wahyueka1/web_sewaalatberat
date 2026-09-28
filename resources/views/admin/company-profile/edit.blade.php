@@ -47,7 +47,7 @@
                    class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm">
         </div>
         <div>
-            <label class="block text-sm font-medium mb-1">Nomor WhatsApp</label>
+            <label class="block text-sm font-medium mb-1">WhatsApp</label>
             <input type="text" name="whatsapp_number" value="{{ old('whatsapp_number', $company->whatsapp_number) }}"
                    placeholder="628xxxxxxxxxx (format internasional, tanpa +)"
                    class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm">

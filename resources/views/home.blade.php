@@ -23,8 +23,13 @@
                 Lihat Alat Berat
             </a>
             <a href="{{ $company->whatsapp_link }}" target="_blank" rel="noopener"
+<<<<<<< HEAD
+               class="bg-green-500 hover:bg-green-600 font-medium px-6 py-3 rounded-lg">
+                Hubungi WhatsApp
+=======
                class="border border-line text-paper font-semibold px-6 py-3 rounded hover:border-steel">
                 Chat WhatsApp
+>>>>>>> 81cb9943d8c579be74bd03f88c71bf6551a4f701
             </a>
         </div>
 
