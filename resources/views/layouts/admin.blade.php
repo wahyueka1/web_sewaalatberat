@@ -13,8 +13,8 @@
         <div class="px-5 py-5 text-lg font-bold text-white border-b border-gray-800">Panel Admin</div>
         <nav class="flex-1 px-3 py-4 space-y-1 text-sm">
             <a href="{{ route('admin.dashboard') }}" class="block px-3 py-2 rounded-lg hover:bg-gray-800 {{ request()->routeIs('admin.dashboard') ? 'bg-gray-800' : '' }}">Dashboard</a>
-            <a href="{{ route('admin.alat.index') }}" class="block px-3 py-2 rounded-lg hover:bg-gray-800 {{ request()->routeIs('admin.alat.*') ? 'bg-gray-800' : '' }}">Alat Berat</a>
-            <a href="{{ route('admin.portofolio.index') }}" class="block px-3 py-2 rounded-lg hover:bg-gray-800 {{ request()->routeIs('admin.portofolio.*') ? 'bg-gray-800' : '' }}">Portofolio</a>
+            <a href="{{ route('admin.alat.index') }}" class="block px-3 py-2 rounded-lg hover:bg-gray-800 {{ request()->routeIs('admin.alat.*') ? 'bg-gray-800' : '' }}">Kelola Alat Berat</a>
+            <a href="{{ route('admin.portofolio.index') }}" class="block px-3 py-2 rounded-lg hover:bg-gray-800 {{ request()->routeIs('admin.portofolio.*') ? 'bg-gray-800' : '' }}">Kelola Portofolio</a>
             <a href="{{ route('admin.company-profile.edit') }}" class="block px-3 py-2 rounded-lg hover:bg-gray-800 {{ request()->routeIs('admin.company-profile.*') ? 'bg-gray-800' : '' }}">Profil Usaha</a>
             <a href="{{ route('admin.settings.edit') }}" class="block px-3 py-2 rounded-lg hover:bg-gray-800 {{ request()->routeIs('admin.settings.*') ? 'bg-gray-800' : '' }}">Pengaturan Admin</a>
         </nav>
