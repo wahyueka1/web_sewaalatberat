@@ -23,13 +23,8 @@
                 Lihat Alat Berat
             </a>
             <a href="{{ $company->whatsapp_link }}" target="_blank" rel="noopener"
-<<<<<<< HEAD
-               class="bg-green-500 hover:bg-green-600 font-medium px-6 py-3 rounded-lg">
-                Hubungi WhatsApp
-=======
                class="border border-line text-paper font-semibold px-6 py-3 rounded hover:border-steel">
                 Chat WhatsApp
->>>>>>> 81cb9943d8c579be74bd03f88c71bf6551a4f701
             </a>
         </div>
 
@@ -46,7 +41,7 @@
     </div>
 </section>
 
-{{-- SPOTLIGHT LOGO --}}
+<!-- {{-- SPOTLIGHT LOGO --}}
 <section class="bg-ink py-10 sm:py-14">
     <div class="max-w-4xl mx-auto px-4 flex flex-col items-center text-center">
         <img src="{{ asset('images/logo-spotlight-cropped.png') }}" alt="{{ $company->company_name }}"
@@ -55,7 +50,7 @@
             Sejak berdiri, {{ $company->company_name }} berkomitmen menghadirkan alat berat siap pakai dengan standar keamanan dan performa terbaik untuk setiap proyek Anda.
         </p>
     </div>
-</section>
+</section> -->
 
 
 {{-- ALAT UNGGULAN --}}
